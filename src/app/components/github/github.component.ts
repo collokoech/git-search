@@ -10,7 +10,9 @@ export class GithubComponent implements OnInit {
   user: any;
   repos: any;
   username: any;
-  constructor(private githubService: GithubService) {
+  
+  constructor(private githubService: GithubService) 
+  {
     this.githubService.getUser().subscribe(user => {
       this.user = user;
       console.log(this.user);
@@ -20,7 +22,9 @@ export class GithubComponent implements OnInit {
       console.log(this.repos);
     });
   }
-  search() {
+
+  search() 
+  {
     this.githubService.updateUsername(this.username);
 
     this.githubService.getUser().subscribe(user => {

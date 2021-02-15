@@ -1,11 +1,12 @@
 <div class="row mt-2">
   <div class="col-md-12">
+
     <form>
       <div class="form-group">
-        <input
+        <input style="width: 60%;"
           type="text"
           class="form-control"
-          placeholder="Github Username"
+          placeholder="Search of jump to ..."
           [(ngModel)]="username"
           [ngModelOptions]="{ standalone: true }"/>
       </div>
@@ -19,8 +20,10 @@
         </button>
       </div>
     </form>
+
   </div>
 </div>
+
 <div *ngIf="user" class="mt-2">
   <div class="card shadow-hover shadow">
     <div class="card-header">
